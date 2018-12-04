@@ -28,6 +28,7 @@
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aWh-aL-gJv">
                                 <rect key="frame" x="16" y="56" width="343" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="9PH-92-wy6"/>
                                 </constraints>
@@ -35,12 +36,13 @@
                                     <segment title="Now Playing"/>
                                     <segment title="Top Rated"/>
                                 </segments>
+                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmentDidChangeMovieType:" destination="BYZ-38-t0r" eventType="valueChanged" id="bMI-uO-PYZ"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9re-ZP-WnF" firstAttribute="top" secondItem="aWh-aL-gJv" secondAttribute="bottom" constant="20" id="Bkl-F9-HGg"/>
                             <constraint firstItem="aWh-aL-gJv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="LWg-Y9-IUy"/>
