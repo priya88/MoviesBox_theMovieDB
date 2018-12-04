@@ -23,6 +23,13 @@ class MovieListController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    // MARK: - Actions
+    
+    @IBAction func segmentDidChangeMovieType(_ sender: UISegmentedControl) {
+        let selectedMovieType = sender.selectedSegmentIndex == 0 ? MovieType.nowPlaying : MovieType.topRated
+        movieListpresenter.loadMovies(for: selectedMovieType)
+    }
+    
 }
 
 
