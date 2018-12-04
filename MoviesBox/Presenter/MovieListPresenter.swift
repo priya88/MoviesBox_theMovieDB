@@ -35,6 +35,10 @@ protocol MovieListView: AnyObject {
     
     func showMovies(movies: [Movie])
     
+    /// Show alert if error while fetching movies.
+    ///
+    /// - Parameter message: Message to display.
+    
     func showErrorAlert(with message: String)
 }
 
