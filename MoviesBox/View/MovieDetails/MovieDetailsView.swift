@@ -11,6 +11,7 @@ import CoreData
 
 class MovieDetailsView: UIView {
     
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
@@ -30,6 +31,9 @@ class MovieDetailsView: UIView {
     // To show data in MovieDetailsView
     
     func showData() {
+        // Show favorite selected if movie is favorite
+        favoriteButton.isSelected = movie.isFavorite
+        
         titleLabel.text = movie.title
         releaseDateLabel.text = movie.releaseDate
         voteAverageLabel.text = "\(movie.voteAverage)"
@@ -64,5 +68,20 @@ class MovieDetailsView: UIView {
             }
         })
     }
-   
+    
+    
+    // MARK: - Actions
+    
+    /// To add/ remove movie from favorite.
+    /// - Parameter sender: UIButton to make movie favorite/ unfavorite.
+    
+    @IBAction func favoriteTapped(_ sender: UIButton) {
+        // Toggle favorite button state
+        sender.isSelected = !sender.isSelected
+        
+        // Update favorite flag for Movie
+        movie.isFavorite = sender.isSelected
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
+    
 }
